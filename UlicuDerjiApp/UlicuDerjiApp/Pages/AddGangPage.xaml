@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UlicuDerjiApp.Pages.AddGangPage"  NavigationPage.HasNavigationBar="True" Visual="Material" BackgroundColor="#fff">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="New gang" Order="Default" Priority="0"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="50" Margin="30">
+                <StackLayout>
+                    <Label Text="Name of Gang"  TextColor="black"></Label>
+                    <Entry x:Name="GangNameEntry" />
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Disctrict"  TextColor="black"></Label>
+                    <Entry x:Name="NewDistrictEntry"></Entry>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Obshyak" TextColor="black"></Label>
+                    <Entry x:Name="ObshyakEntry"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Button x:Name="AddGangBtn" Text="Add" BackgroundColor="White" BorderColor="Black" BorderWidth="1" CornerRadius="10" Margin="30, 0, 30 , 0" Clicked="AddGangBtn_Clicked"/>
+                    <Button x:Name="BackButton" Text="Back" BackgroundColor="White" Margin="30, 0, 30 , 0" Clicked="BackButton_Clicked"/>
+                </StackLayout> 
+            </StackLayout>
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>

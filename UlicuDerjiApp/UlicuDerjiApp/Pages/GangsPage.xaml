@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UlicuDerjiApp.Pages.GangsPage" Title="Gangs" NavigationPage.HasNavigationBar="True" Visual="Material" BackgroundColor="#fff">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="AddIcon.png" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="GangsList" SeparatorColor="Black" Margin="20"  WidthRequest="80">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout  Orientation="Horizontal">
+                                    <Image x:Name="GangPhoto" Source="StrelaIcon" WidthRequest="45" HeightRequest="60"></Image>
+                                    <StackLayout Orientation="Vertical" Spacing="-5">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="Name:" />
+                                            <Label Text="{Binding StreetName}"/>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="District:"/>
+                                            <Label Text="{Binding District}"/>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="Obshyak:"/>
+                                            <Label Text="{Binding Obshyak}"/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout>
+                <Button x:Name="CreateGangBtn" Text="Create gang" BackgroundColor="White" BorderWidth="1" BorderColor="Black" CornerRadius="10" Clicked="CreateGangBtn_Clicked"/>
+            </StackLayout>
+    </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UlicuDerjiApp.Pages.AuthPage" NavigationPage.HasNavigationBar="False" Visual="Material" BackgroundColor="#fff">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" Spacing="30" Padding="30">
+            <StackLayout VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand">
+                <Image Source="UlicuDerjiLogo.png" Margin="30, 0, 30, 0" />
+            </StackLayout>
+            <StackLayout Spacing="30">
+                <StackLayout Spacing="0">
+                    <Label Text="Login" TextColor="Black" FontSize="20"></Label>
+                    <Entry x:Name="LoginEntry" Keyboard="Email"/>
+                </StackLayout>
+                <StackLayout Spacing="0">
+                    <Label Text="Password" TextColor="Black" FontSize="20"></Label>
+                    <Entry x:Name="PasswordEntry" IsPassword = "True" />
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" >
+                <Button Text="Sign in" CornerRadius="10" BackgroundColor="White" BorderColor="Black" BorderWidth="1" HorizontalOptions="FillAndExpand" Clicked="SignInBtn_Clicked"></Button>
+                <Button Text="Sign up" CornerRadius="10" BackgroundColor="White" BorderColor="Black" BorderWidth="1" HorizontalOptions="FillAndExpand" Clicked="SignUpBtn_Clicked"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

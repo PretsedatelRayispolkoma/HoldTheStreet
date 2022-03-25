@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UlicuDerjiApp.Pages.RegPage" NavigationPage.HasNavigationBar="True" Visual="Material" BackgroundColor="#fff">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Registration" Order="Default" Priority="0"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Padding="30" Spacing="10">
+            <StackLayout>
+                <StackLayout>
+                    <Label TextColor="Black" Text="Name" FontSize="18"></Label>
+                    <Entry x:Name="nameEntry"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label TextColor="Black" Text="Surname" FontSize="18"></Label>
+                    <Entry x:Name="surnameEntry" Keyboard="Text"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label TextColor="Black" Text="Email" FontSize="18"></Label>
+                    <Entry x:Name="emailEntry" Keyboard="Email"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label TextColor="Black" Text="Password" FontSize="18"></Label>
+                    <Entry x:Name="PasswordEntry" IsPassword ="True"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label TextColor="Black" Text="Confirm password" FontSize = "18"></Label>
+                    <Entry x:Name="Password2Entry" IsPassword = "True"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout VerticalOptions="EndAndExpand">
+                <Button BackgroundColor="White" BorderWidth="1" BorderColor="Black" CornerRadius="10" Text="Sign up" Clicked="SignBtn_Clicked"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
